@@ -21,20 +21,20 @@
     font-style: normal;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Figtree", sans-serif;
-}
-
 body {
     display: grid;
     place-content: center;
     min-height: 100vh;
     background: #ffcdcd;
+}
+
+.titleLogo{
+    margin-bottom: 20px;
+}
+.titleLogo h1{
+    font-size: 6rem;
+    font-family: 'BookkMyungjo-Bd';
+    letter-spacing: 1rem;
 }
 
 .container {
@@ -107,12 +107,38 @@ body {
 .wrapper {
     width: 960px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 160px 0;
 }
 
 .wrapper .whiteBox {
     padding: 60px 80px 80px;
     background: rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+
+.wrapper .whiteBox::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-image: url('./src/thumb/ornament_t.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -162px;
+    left: -105px;
+}
+.wrapper .whiteBox::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-image: url('./src/thumb/ornament_b.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -120px;
+    bottom: -120px;
 }
 
 .wrapper .textBox {
@@ -141,6 +167,36 @@ body {
     width: 800px;
 }
 
+.wrapper .comment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.wrapper .comment .text {
+    width: 74%;
+	position: relative;
+	background: rgba(255, 255, 255, 0.8);
+    padding: 24px;
+	border-radius: .4em;
+}
+
+.wrapper .comment .text:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 36px solid transparent;
+	border-right-color: rgba(255, 255, 255, 0.8);
+	border-left: 0;
+	border-top: 0;
+	margin-top: -18px;
+	margin-left: -36px;
+}
+
 .backButton {
     position: fixed;
     left: 40px;
@@ -152,4 +208,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
