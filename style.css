@@ -30,10 +30,11 @@ body {
 }
 
 .titleLogo{
-    margin-bottom: 20px;
+	display: none;
+    /* margin-bottom: 20px; */
 }
 .titleLogo h1{
-    font-size: 60px;
+    font-size: 84px;
     font-family: "WindSong", cursive;
 	font-weight: 500;
 	font-style: normal;
